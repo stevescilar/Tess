@@ -13,7 +13,9 @@
                     <div class="card-header">
                         Register
                     </div>
-                    <div class="card-body">
+                    <form action="{{ route('store.user') }}" method="post">
+                        @csrf
+                        <div class="card-body">
                         <div class="form-group">
                             <label for="Fullname">Full Name</label>
                             <input type="text" name="full_name" id="" class="form-control" placeholder="Enter your full name">
@@ -31,6 +33,8 @@
                             <button class="btn btn-primary" type="submit">Register</button>
                         </div>
                     </div>
+                    </form>
+                    
                 </div>
 
             </div>

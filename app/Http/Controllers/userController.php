@@ -10,4 +10,13 @@ class userController extends Controller
     {
         return view ('user.register');
     }
+
+    public function storeUser()
+    {
+        User::create([
+            'name' => request('name'),
+            'email' => request('email'),
+            'password' => bcrypt(request('password')),
+            ]);
+    }
 }

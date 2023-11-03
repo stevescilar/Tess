@@ -9,4 +9,5 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/register/user', [userController::class, 'createUser']);
+Route::get('/register/user', [userController::class, 'createUser'])->name('create.user');
+Route::post('/register/user', [userController::class, 'storeUser'])->name('store.user');
